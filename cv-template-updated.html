@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Ibrahim Khedr - CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: #fff;
+            font-size: 11px;
+        }
+        
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 15px;
+            background: #fff;
+        }
+        
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 15px;
+        }
+        
+        .name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 14px;
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .contact-item i {
+            color: #2563eb;
+            width: 10px;
+        }
+        
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        /* Section Styles */
+        .section {
+            margin-bottom: 18px;
+        }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2563eb;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+        }
+        
+        /* About Section */
+        .about-text {
+            font-size: 11px;
+            line-height: 1.5;
+            color: #64748b;
+        }
+        
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 15px;
+        }
+        
+        .job-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 2px;
+        }
+        
+        .company {
+            font-size: 11px;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+        
+        .period {
+            font-size: 10px;
+            color: #64748b;
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+        
+        .job-description {
+            font-size: 10px;
+            color: #64748b;
+            line-height: 1.4;
+        }
+        
+        .job-description ul {
+            margin-left: 12px;
+        }
+        
+        .job-description li {
+            margin-bottom: 2px;
+        }
+        
+        /* Education Section */
+        .education-item {
+            margin-bottom: 12px;
+        }
+        
+        .degree {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 2px;
+        }
+        
+        .institution {
+            font-size: 11px;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+        
+        .year-grade {
+            font-size: 10px;
+            color: #64748b;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .skill-category {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 6px;
+        }
+        
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        
+        .skill-name {
+            font-size: 10px;
+            color: #64748b;
+        }
+        
+        .skill-level {
+            font-size: 9px;
+            color: #2563eb;
+            font-weight: 500;
+        }
+        
+        /* Languages */
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        
+        .language-name {
+            font-size: 10px;
+            color: #64748b;
+        }
+        
+        .language-level {
+            font-size: 9px;
+            color: #2563eb;
+            font-weight: 500;
+        }
+        
+        /* Internships & Projects */
+        .internship-item, .project-item {
+            margin-bottom: 10px;
+        }
+        
+        .internship-title, .project-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 2px;
+        }
+        
+        .internship-period, .project-description {
+            font-size: 10px;
+            color: #64748b;
+            margin-bottom: 2px;
+        }
+        
+        /* Responsive */
+        @media print {
+            body {
+                font-size: 9px;
+            }
+            
+            .cv-container {
+                padding: 12px;
+            }
+            
+            .name {
+                font-size: 20px;
+            }
+            
+            .title {
+                font-size: 12px;
+            }
+            
+            .section-title {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="name">Ahmed Ibrahim Khedr</h1>
+            <p class="title">Chemistry Professional</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i>📍</i>
+                    <span>Qalyubia, Egypt</span>
+                </div>
+                <div class="contact-item">
+                    <i>📞</i>
+                    <span>01063808831</span>
+                </div>
+                <div class="contact-item">
+                    <i>✉️</i>
+                    <a href="mailto:khedra57@gmail.com">khedra57@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i>🔗</i>
+                    <a href="https://linkedin.com/in/ahmed-khedr-941476240">linkedin.com/in/ahmed-khedr-941476240</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="about-text">
+                Dedicated chemist with practical experience working in industrial and manufacturing environments. 
+                Skilled in various production processes and quality control practices across different industries, 
+                including sanitary ware and textiles. Proficient in using multiple laboratory instruments and 
+                techniques to ensure product quality and compliance with safety standards. Experience includes 
+                managing production workflows, performing quality checks, and collaborating with teams to maintain 
+                high standards in chemical processes and product development.
+            </p>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="experience-item">
+                <h3 class="job-title">Production Chemist – Mold Section</h3>
+                <p class="company">Ideal Standard International</p>
+                <p class="period">July 2025 – Present</p>
+                <div class="job-description">
+                    <ul>
+                        <li>Sanitary Ware Department - Specialized in gypsum mold production</li>
+                        <li>Responsible for producing high-quality gypsum molds for Chinese sanitary products</li>
+                        <li>Ensured execution of the production plan and maintained quality standards</li>
+                        <li>Managed machinery operations and coordinated workforce activities</li>
+                        <li>Performed weekly quality control checks on gypsum materials and finished products</li>
+                        <li>Maintained production efficiency and quality compliance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="job-title">QC Chemist</h3>
+                <p class="company">Ideal Standard International</p>
+                <p class="period">May 2025 – July 2025 (2 months)</p>
+                <div class="job-description">
+                    <ul>
+                        <li>Conducted comprehensive testing of raw materials for sanitary products</li>
+                        <li>Performed production line quality control to ensure product standards</li>
+                        <li>Operated and maintained various lab instruments: Malvern Sizer, X-ray Analyzer, Brookfield Viscometer, Gallen Kamp, Spectrophotometer</li>
+                        <li>Documented test results and maintained quality control records</li>
+                        <li>Collaborated with production teams to address quality issues</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <h3 class="job-title">Lab Chemist</h3>
+                <p class="company">Abo El Ela For Textile and Dyeing</p>
+                <p class="period">2023 – 2024</p>
+                <div class="job-description">
+                    <ul>
+                        <li>Conducted quality control testing for textile dyeing processes</li>
+                        <li>Worked with various fabric types including cotton, polyester, and blended materials</li>
+                        <li>Performed color fastness tests and quality assessments</li>
+                        <li>Operated laboratory equipment for textile analysis</li>
+                        <li>Maintained laboratory safety protocols and equipment calibration</li>
+                        <li>Documented test procedures and results for quality assurance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h3 class="degree">B.Sc. in Special Chemistry</h3>
+                <p class="institution">Ain Shams University</p>
+                <p class="year-grade">2022 • Grade: Good</p>
+            </div>
+        </div>
+
+        <!-- Internships Section -->
+        <div class="section">
+            <h2 class="section-title">Internships</h2>
+            <div class="internship-item">
+                <h3 class="internship-title">Egyptian Chemistry Authority</h3>
+                <p class="internship-period">Aug - Sep 2021</p>
+                <p class="internship-description">Hands-on lab rotation across multiple industries</p>
+            </div>
+            <div class="internship-item">
+                <h3 class="internship-title">Egyptian Petroleum Institute</h3>
+                <p class="internship-period">Aug - Sep 2020</p>
+                <p class="internship-description">Online training in petroleum analysis and separation techniques</p>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="section">
+            <h2 class="section-title">Graduation Projects</h2>
+            <div class="project-item">
+                <h3 class="project-title">Use of polymers in medicine</h3>
+                <p class="project-description">Research on pharmaceutical applications of polymer chemistry</p>
+            </div>
+            <div class="project-item">
+                <h3 class="project-title">Using a phone camera as a chemical analysis tool</h3>
+                <p class="project-description">Innovative approach to chemical analysis using smartphone technology</p>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3 class="skill-category">Technical Skills</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Analytical Chemistry</span>
+                        <span class="skill-level">95%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Organic Chemistry</span>
+                        <span class="skill-level">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Industry Chemistry</span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Lab Techniques</span>
+                        <span class="skill-level">92%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Microsoft Office</span>
+                        <span class="skill-level">88%</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="skill-category">Soft Skills</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Communication</span>
+                        <span class="skill-level">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Problem-solving</span>
+                        <span class="skill-level">88%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Critical Thinking</span>
+                        <span class="skill-level">85%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Attention to Detail</span>
+                        <span class="skill-level">95%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Creative Thinking</span>
+                        <span class="skill-level">88%</span>
+                    </div>
+                    
+                    <h3 class="skill-category" style="margin-top: 12px;">Languages</h3>
+                    <div class="language-item">
+                        <span class="language-name">Arabic</span>
+                        <span class="language-level">Fluent</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">English</span>
+                        <span class="language-level">Intermediate (B1)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

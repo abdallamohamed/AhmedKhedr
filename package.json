@@ -1,0 +1,46 @@
+{
+  "name": "ahmed-khedr-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Ahmed Ibrahim Khedr - Chemistry Professional",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "live-server --port=8000",
+    "build": "echo 'No build process required - static HTML/CSS/JS'",
+    "deploy": "echo 'Ready for deployment to any static hosting service'"
+  },
+  "keywords": [
+    "portfolio",
+    "chemistry",
+    "professional",
+    "responsive",
+    "bootstrap",
+    "html5",
+    "css3",
+    "javascript"
+  ],
+  "author": "Ahmed Ibrahim Khedr",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/ahmed-khedr-portfolio.git"
+  },
+  "homepage": "https://ahmed-khedr-portfolio.com",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "bugs": {
+    "url": "https://github.com/username/ahmed-khedr-portfolio/issues"
+  },
+  "dependencies": {
+    "puppeteer": "^24.12.1"
+  }
+}
