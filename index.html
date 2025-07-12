@@ -5,11 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed Ibrahim Khedr - Chemistry Professional</title>
     
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="images/PicsArt_07-12-03.22.37.jpg" as="image">
+    
+    <!-- Meta Tags for SEO and Social Media -->
+    <meta name="description" content="Ahmed Ibrahim Khedr - Chemistry Professional with expertise in quality control, production, and laboratory techniques. Specialized in sanitary ware and textile industries.">
+    <meta name="keywords" content="chemistry, quality control, laboratory, production, sanitary ware, textile, Egypt, analytical chemistry, organic chemistry">
+    <meta name="author" content="Ahmed Ibrahim Khedr">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ahmed Ibrahim Khedr - Chemistry Professional">
+    <meta property="og:description" content="Passionate chemist with hands-on experience in quality control, production, and laboratory techniques.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahmed-khedr-portfolio.com">
+    <meta property="og:image" content="images/PicsArt_07-12-03.22.37.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Ahmed Khedr Portfolio">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ahmed Ibrahim Khedr - Chemistry Professional">
+    <meta name="twitter:description" content="Passionate chemist with hands-on experience in quality control, production, and laboratory techniques.">
+    <meta name="twitter:image" content="images/PicsArt_07-12-03.22.37.jpg">
+    <meta name="twitter:creator" content="@ahmedkhedr">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧪</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧪</text></svg>">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Ahmed Khedr">
+    
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,6 +65,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#home" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
         <div class="container">
@@ -46,8 +96,8 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-outline-light btn-sm ms-2" id="themeToggle">
-                            <i class="fas fa-moon"></i>
+                        <button class="btn btn-outline-light btn-sm ms-2" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+                            <i class="fas fa-moon" aria-hidden="true"></i>
                         </button>
                     </li>
                 </ul>
@@ -63,26 +113,26 @@
                     <div class="hero-content">
                         <h1 class="hero-title">Ahmed Ibrahim Khedr</h1>
                         <h2 class="hero-subtitle">Chemistry Professional</h2>
-                        
                         <!-- Mobile Profile Image (appears after name) -->
-                        <div class="profile-img-wrapper mobile-profile">
+                        <div class="mobile-profile">
                             <div class="profile-img-container">
                                 <img src="images/PicsArt_07-12-03.22.37.jpg" 
                                      alt="Ahmed Ibrahim Khedr - Chemistry Professional" 
                                      class="profile-img"
                                      loading="eager"
+                                     width="130"
+                                     height="130"
                                      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="profile-img-fallback" style="display: none;">
-                                    <i class="fas fa-user-graduate"></i>
+                                <div class="profile-img-fallback" style="display: none;" role="img" aria-label="Profile image placeholder">
+                                    <i class="fas fa-user-graduate" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </div>
-                        
                         <p class="hero-description">
                             Passionate chemist with hands-on experience in quality control, production, and laboratory techniques. Dedicated to ensuring product quality and safety in the chemical industry.
                         </p>
                         <div class="hero-buttons mb-3">
-                            <a href="public/assets/ahmed-khedr-cv.pdf" class="btn btn-success btn-lg me-3" download>
+                            <a href="public/assets/ahmed-khedr-cv.pdf" class="btn btn-success btn-lg me-3" download="Ahmed-Khedr-CV.pdf">
                                 <i class="fas fa-download me-2"></i>Download CV
                             </a>
                             <a href="#contact" class="btn btn-primary btn-lg">
@@ -91,20 +141,20 @@
                         </div>
                         <div class="hero-info mt-4">
                             <div class="info-item">
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                                 <span>Qalyubia, Egypt</span>
                             </div>
                             <div class="info-item">
-                                <i class="fas fa-phone"></i>
-                                <span>01063808831</span>
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <a href="tel:+201063808831" aria-label="Call Ahmed Khedr">01063808831</a>
                             </div>
                             <div class="info-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>khedra57@gmail.com</span>
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <a href="mailto:khedra57@gmail.com" aria-label="Email Ahmed Khedr">khedra57@gmail.com</a>
                             </div>
                             <div class="info-item">
-                                <i class="fab fa-linkedin"></i>
-                                <a href="https://linkedin.com/in/ahmed-khedr-941476240" target="_blank">linkedin.com/in/ahmed-khedr-941476240</a>
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                <a href="https://linkedin.com/in/ahmed-khedr-941476240" target="_blank" rel="noopener noreferrer" aria-label="Visit Ahmed Khedr's LinkedIn profile">linkedin.com/in/ahmed-khedr-941476240</a>
                             </div>
                         </div>
                     </div>
@@ -112,7 +162,13 @@
                 <div class="col-lg-6">
                     <div class="hero-image">
                         <div class="profile-display">
-                            <img src="images/PicsArt_07-12-03.22.37.jpg" alt="Ahmed Khader" class="hero-profile-image">
+                            <img src="images/PicsArt_07-12-03.22.37.jpg" 
+                                 alt="Ahmed Ibrahim Khedr - Chemistry Professional" 
+                                 class="hero-profile-image"
+                                 loading="eager"
+                                 width="280"
+                                 height="280"
+                                 onerror="this.style.display='none';">
                         </div>
                     </div>
                 </div>
@@ -205,7 +261,7 @@
                                 <div class="timeline-header">
                                     <h4>Production Chemist – Mold Section</h4>
                                     <span class="company">Ideal Standard International</span>
-                                    <span class="period">July 2025 – Present</span>
+                                    <span class="period">July 2023 – Present</span>
                                 </div>
                                 <ul class="timeline-details">
                                     <li>Sanitary Ware Department - Specialized in gypsum mold production</li>
@@ -224,7 +280,7 @@
                                 <div class="timeline-header">
                                     <h4>QC Chemist</h4>
                                     <span class="company">Ideal Standard International</span>
-                                    <span class="period">May 2025 – July 2025 (2 months)</span>
+                                    <span class="period">May 2023 – July 2023 (2 months)</span>
                                 </div>
                                 <ul class="timeline-details">
                                     <li>Conducted comprehensive testing of raw materials for sanitary products (toilet seats, washbasins, etc.)</li>
@@ -487,7 +543,7 @@
                                 <div class="contact-actions">
                                     <h3><i class="fas fa-rocket me-2"></i>Quick Actions</h3>
                                     <div class="action-buttons">
-                                        <a href="public/assets/Ahmed_Khedr_CV.pdf" class="btn btn-success btn-lg w-100 mb-3" download>
+                                        <a href="public/assets/ahmed-khedr-cv.pdf" class="btn btn-success btn-lg w-100 mb-3" download="Ahmed-Khedr-CV.pdf">
                                             <i class="fas fa-download me-2"></i>Download CV
                                         </a>
                                         <a href="mailto:khedra57@gmail.com" class="btn btn-primary btn-lg w-100 mb-3">
@@ -518,7 +574,7 @@
     </footer>
 
     <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     
     <!-- Custom JS -->
     <script src="script.js"></script>
